@@ -6,6 +6,7 @@
  */
 
 #import "NlFokkezbMagicpieModule.h"
+//#import "NlFokkezbMagicpieElement.h"
 #import "TiBase.h"
 #import "TiHost.h"
 #import "TiUtils.h"
@@ -87,21 +88,12 @@
 
 #pragma Public APIs
 
--(id)example:(id)args
-{
-	// example method
-	return @"hello world";
-}
-
--(id)exampleProp
-{
-	// example property getter
-	return @"hello world";
-}
-
--(void)setExampleProp:(id)value
-{
-	// example property setter
-}
+//-(NlFokkezbMagicpieElement)createElement:(id)args
+//{
+//	ENSURE_SINGLE_ARG(args,NSDictionary);
+//	CGFloat value = [TiUtils floatValue:@"value" properties:args];
+//	TiColor *color = [TiUtils colorValue:@"color" properties:args];
+//	return [[NlFokkezbMagicpieElement alloc] initWithElement:[PieElement pieElementWithValue:value color:[TiColor _color]]];
+//}
 
 @end

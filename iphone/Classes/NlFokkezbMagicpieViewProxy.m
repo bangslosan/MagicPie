@@ -6,15 +6,12 @@
  */
 
 #import "NlFokkezbMagicpieViewProxy.h"
-#import "TiUtils.h"
+#import "NlFokkezbMagicpieView.h"
 
 @implementation NlFokkezbMagicpieViewProxy
 
-// -(void)valueChanged:(EFCircularSlider*)slider {
-//     NSNumber* currentValue = [NSNumber numberWithFloat:slider.currentValue];
-//     [self fireEvent:@"change" withObject:@{
-//                                            @"value":currentValue
-//                                            }];
-// }
+-(void)addValues_:(id)values
+{
+}
 
 @end

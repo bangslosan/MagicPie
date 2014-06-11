@@ -5,13 +5,11 @@
  * Copyright (c) 2014 Fokke Zandbergen. All rights reserved.
  */
 
-#import "TiBase.h"
-#import "TiUIView.h"
+#import "TiProxy.h"
 #import "MagicPieLayer.h"
 
-@interface NlFokkezbMagicpieView : TiUIView {
-    PieLayer* pieLayer;
+@interface NlFokkezbMagicpieElementProxy : TiProxy {
+    PieElement *pieElement;
 }
-
 
 @end

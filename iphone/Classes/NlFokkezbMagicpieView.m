@@ -9,6 +9,13 @@
 
 @implementation NlFokkezbMagicpieView
 
+-(void)dealloc
+{
+    RELEASE_TO_NIL(pieLayer);
+    
+    [super dealloc];
+}
+
 -(UIView *)pieWrapperView
 {
     return self;
@@ -28,9 +35,9 @@
         pieLayer = [[PieLayer alloc] init];
         pieLayer.frame = [self bounds];
 
-        [pieLayer addValues:@[[PieElement pieElementWithValue:5.0 color:[UIColor redColor]],
-          [PieElement pieElementWithValue:4.0 color:[UIColor blueColor]],
-          [PieElement pieElementWithValue:7.0 color:[UIColor greenColor]]] animated:NO];
+         [pieLayer addValues:@[[PieElement pieElementWithValue:5.0 color:[UIColor redColor]],
+           [PieElement pieElementWithValue:4.0 color:[UIColor blueColor]],
+           [PieElement pieElementWithValue:7.0 color:[UIColor greenColor]]] animated:NO];
 
         [[self pieWrapperView].layer insertSublayer:pieLayer atIndex:0];
         // [pieLayer setMinimumValue:oldPieLayer.minimumValue];
@@ -43,8 +50,13 @@
      // }
 }
 
--(void)addValues
-
+- (void)setValues_:(NSArray *)addingNewValues animated:(BOOL)animated
+{
+    // need to get the pieElement of every NLFokkezbMagicpieElementProxy passed
+    // copy-pasting the example addValues here doesn't work?!
+    
+    [pieLayer addValues:addingNewValues animated:animated];
+}
 
 // -(void)setMinimumValue_:(id)minimum
 // {

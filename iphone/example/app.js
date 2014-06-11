@@ -10,6 +10,23 @@ var view = MagicPie.createView({
   top: 20
 });
 
+var elementA = MagicPie.createElement({
+  color: '#f00',
+  value: 50
+});
+
+elementA.color = 'blue';
+
+console.debug(elementA.color);
+console.debug(elementA.value);
+
+// var elementB = MagicPie.createElement({
+//   color: '#f00',
+//   value: 50
+// });
+
+view.setValues([elementA]);
+
 win.add(view);
 
 win.add(Ti.UI.createLabel({
