@@ -1,3 +1,6 @@
+> WARNING: Do not use, under construction
+-------------------------------------------
+
 # MagicPie Module
 
 ## Description
